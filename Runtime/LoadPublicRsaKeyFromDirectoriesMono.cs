@@ -43,7 +43,8 @@ public class LoadPublicRsaKeyFromDirectoriesMono : MonoBehaviour
         {
             if (item != null)
             {
-                Eloi.E_FileAndFolderUtility.ExportByOverriding(item, "//Add folder path you want to import from your computer");
+                if (!Eloi.E_FileAndFolderUtility.Exists(item))
+                    Eloi.E_FileAndFolderUtility.ExportByOverriding(item, "//Add folder path you want to import from your computer");
                 string path = item.GetPath();
                 if (File.Exists(path)) { 
                     string [] lines = File.ReadAllLines(path);
@@ -106,7 +107,8 @@ public class LoadPublicRsaKeyFromDirectoriesMono : MonoBehaviour
 
             if (path == null)
                 continue;
-            Eloi.E_FileAndFolderUtility.ExportByOverriding(item, "//Add here public key split by 切 ");
+            if (!Eloi.E_FileAndFolderUtility.Exists(item))
+                Eloi.E_FileAndFolderUtility.ExportByOverriding(item, "//Add here public key split by 切 ");
             ExportImportRsaKeyAsCompressedFile.ImportRsaKey(path, out List<string> keys);
             foreach (var key in keys)
             {
