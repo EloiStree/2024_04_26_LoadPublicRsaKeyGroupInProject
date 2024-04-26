@@ -1,0 +1,16 @@
+
+{                                                                   
+            "name": "be.eloistree.loadpublicrsakeyfromfoldersEditor",          
+    "references": ["be.eloistree.loadpublicrsakeyfromfolders"
+],                                                              
+    "optionalUnityReferences": [],                                  
+    "includePlatforms": [                                           
+        "Editor"                                                    
+    ],                                                              
+    "excludePlatforms": [],                                         
+    "allowUnsafeCode": false,                                       
+    "overrideReferences": false,                                    
+    "precompiledReferences": [],                                    
+    "autoReferenced": true,                                         
+    "defineConstraints": []                                         
+}                                                                   
